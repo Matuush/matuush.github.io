@@ -2,17 +2,57 @@
 <html>
    <head> 
       <title> Deez nuts </title>
+   <style>
+.text {
+   font-size: 24px;
+}
+.subtitle {
+   font-size: 36px;
+}
+.main {
+  grid-area: main;
+}
+.left {
+   grid-area: left;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.right {
+   grid-area: right;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.container {
+   display: grid;
+   justify-content: stretch;
+   grid-template-columns: 3fr 2fr 2fr 3fr;
+   grid-template-rows: auto;
+   grid-template-areas: 
+      "left main main right"
+      "left main main right"
+      ". main main .";
+   justify-items: center;
+}
+   </style>
    </head>
 
    <body> <center>
-      <h1 class='title'>Tohle je přepadení</h1>
-      <p class='text'>"<i>Proč jsme takový vemena Matúši?</i>"</p>
-      <h2>Kontakt</h2>
-      <p class='contact'>
-         Osobní mail: matus1@pull.cz<br>
-         Discord: the_matuush<br>
-         Github: <a href='https://github.com/matuush'>Matuush</a>
-      </p>
-      <h2>
-      </center></body>
+   <div class='container'>
+      <div class='main'>
+         <h1 class='title' style='font-size:44px'>Tohle je přepadení</h1>
+         <p class='text'>"<i>Proč jsme takový vemena Matúši?</i>"</p>
+         <h2 class='subtitle'>Kontakt</h2>
+         <p class='text'>
+            Osobní mail: matus1@pull.cz<br>
+            Discord: the_matuush<br>
+            Github: <a href='https://github.com/matuush'>Matuush</a>
+         </p>
+         <h2>
+      </main>
+   </div>
+   <img src='karinka.jpg' class='left'> </img>
+   <img src='puficek.jpg' class='right'> </img>
+   </center></body>
 </html>
