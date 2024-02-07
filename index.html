@@ -19,6 +19,7 @@
 .left {grid-area: left;}
 .right {grid-area: right;}
 .down {grid-area: down;}
+.imgcontain {object-fit: contain;}
 img {  
    object-fit: contain;
    width: 100%;
@@ -60,13 +61,17 @@ img {
       </div>
 
       <div class='left'>
-         <img src='karinka.jpg'>
-         <a class='text'><i>Obrázek 1:</i> Karinka</a>
+         <div class='imgcontain'>
+            <img src='karinka.jpg'>
+            <a class='text'><i>Obrázek 1:</i> Karinka</a>
+         </div>
       </div>
 
       <div class='right'>
-         <img src='puficek.jpg'>
-         <a class='text'><i>Obrázek 2:</i> Pufíček</a>
+         <div class='imgcontain'>
+            <img src='puficek.jpg'>
+            <a class='text'><i>Obrázek 2:</i> Pufíček</a>
+         </div>
       </div>
 
       <div class='down'>
