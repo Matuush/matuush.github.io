@@ -15,15 +15,19 @@
 }
 .left {
    grid-area: left;
-   width: 100%;
-   height: 100%;
    object-fit: cover;
 }
 .right {
    grid-area: right;
+   object-fit: cover;
+}
+.down {
+   grid-area: down;
+   object-fit: cover;
+}
+img {
    width: 100%;
    height: 100%;
-   object-fit: cover;
 }
 .container {
    display: grid;
@@ -33,7 +37,7 @@
    grid-template-areas: 
       "left main main right"
       "left main main right"
-      ". main main .";
+      "down down down down";
    justify-items: center;
 }
    </style>
@@ -43,27 +47,46 @@
    <div class='container'> 
       <div class='main'>
          <h1 class='title' style='font-size:44px'>Tohle je přepadení</h1>
-         <p class='text'>"<i>Proč jsme takový vemena Matúši?</i>"</p>
-         <p class='text'>"<i>Nepřišel Mohamed za javascriptem, přišel javascript za Mohamedem.</i>"</p>
+         <p class='text'>
+            "<i>Proč jsme takový vemena Matúši?</i>"<br>
+            - Kačka
+         </p>
+         <p class='text'>
+            "<i>Nepřišel Mohamed za javascriptem, přišel javascript za Mohamedem.</i>"<br>
+            - Kubík
+         </p>
+         <p class='text'>
+            "<i>Čau lidi, já jsem křeček.</i>"<br>
+            - Topení
+         </p>
          <br><br>
 
          <p class='text'>Webové stránky takového toho tamtoho člověka</p><br><br>
+      </div>
 
-         <h2 class='subtitle'>Kontakt</h2>
-         <p class='text'>
-            E-mail: matus1@pull.cz<br>
-            Discord: the_matuush<br>
-         </p>
+      <div class='left'>
+         <img src='karinka.jpg'>
+         <a class='text'><i>Obrázek 1:</i> Karinka</a>
+      </div>
 
+      <div class='right'>
+         <img src='puficek.jpg'>
+         <a class='text'><i>Obrázek 2:</i> Pufíček</a>
+      </div>
+
+      <div class='down'>
          <h2 class='subtitle'>Projekty</h2>
          <p class='text'>
             Rekurzivní piškvorky v C++ do WebAssembly: <a href='pisiskvory.html'>mat.uuush.eu/pisiskvory</a><br>
             Rekurzivní piškvorky ve Svelte: <a href='p.html'>mat.uuush.eu/p</a><br>
          </p>
 
-      </main>
+         <h2 class='subtitle'>Kontakt</h2>
+         <p class='text'>
+            E-mail: matus1@pull.cz<br>
+            Discord: the_matuush<br>
+         </p>
+      </div>
    </div>
-   <img src='karinka.jpg' class='left'><a class='text'><i>Obrázek 1:</i> Karinka</a></img>
-   <img src='puficek.jpg' class='right'><a class='text'><i>Obrázek 2:</i> Pufíček</a></img>
 </center> </body>
 </html>
