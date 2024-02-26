@@ -16,12 +16,16 @@
    font-size: 150%;
 }
 .main {grid-area: main;}
-.left {grid-area: left;}
-.right {grid-area: right;}
-.down {grid-area: down;}
-.imgcontain {object-fit: contain;}
-img {  
+.left {
+   grid-area: left;
    object-fit: contain;
+}
+.right {
+   grid-area: right;
+   object-fit: contain;
+}
+.down {grid-area: down;}
+img {  
    width: 100%;
    height: 100%;
 }
@@ -42,32 +46,17 @@ img {
    <div class='container'> 
       <div class='main'>
          <h1 class='title'>Tohle je přepadení</h1>
-         <p class='text'>
-            "<i>Proč jsme takový vemena Matúši?</i>"<br>
-            - Kačka
-         </p>
-         <p class='text'>
-            "<i>Nepřišel Mohamed za javascriptem, přišel javascript za Mohamedem.</i>"<br>
-            - Kubík
-         </p>
-         <p class='text'>
-            "<i>Čau lidi, já jsem křeček.</i>"<br>
-            - Topení
-         </p>
+         <div id='quotes'> </div>
       </div>
 
       <div class='left'>
-         <div class='imgcontain'>
-            <img src='karinka.jpg'>
-            <a class='text'><i>Obrázek 1:</i> Karinka</a>
-         </div>
+         <img src='karinka.jpg'>
+         <a class='text'><i>Obrázek 1:</i> Karinka</a>
       </div>
 
       <div class='right'>
-         <div class='imgcontain'>
-            <img src='puficek.jpg'>
-            <a class='text'><i>Obrázek 2:</i> Pufíček</a>
-         </div>
+         <img src='puficek.jpg'>
+         <a class='text'><i>Obrázek 2:</i> Pufíček</a>
       </div>
 
       <div class='down'>
@@ -85,5 +74,17 @@ img {
          </p>
       </div>
    </div>
+<script>
+   let q = [
+      ['Proč jsme takový vemena Matúši?', 'Kačka'],
+      ['Nepřišel Mohamed za javascriptem, přišel javascript za Mohamedem.', 'Kubík'],
+      ['Chudák Mohamed.', 'Jirka'],
+      ['Čau lidi, já jsem křeček.', 'Topení']
+   ];
+   let quotes = document.getElementById('quotes');
+   q.forEach(quote => {
+      quotes.innerHTML += '<p class=\'text\'>"<i>' + quote[0] + '</i>"<br> - ' + quote[1] + '</p>';
+   });
+</script>
 </center> </body>
 </html>
