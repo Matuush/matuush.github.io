@@ -20,10 +20,10 @@
 .right {grid-area: right;}
 .down {grid-area: down;}
 img {  
-   object-fit: contain;
    width: 100%;
    height: 100%;
 }
+.imgcontain {object-fit: contain;}
 .container {
    display: grid;
    grid-template-columns: 3fr 2fr 2fr 3fr;
@@ -44,15 +44,15 @@ img {
          <div id='quotes'> </div>
       </div>
 
-      <div class='left'>
+      <div class='left'> <div class='imgcontain'>
          <img src='img/karinka.jpg'>
          <a class='text'><i>Obrázek 1:</i> Karinka</a>
-      </div>
+      </div> </div>
 
-      <div class='right'>
+      <div class='right'> <div class='imgcontain'>
          <img src='img/puficek.jpg'>
          <a class='text'><i>Obrázek 2:</i> Pufíček</a>
-      </div>
+      </div> </div>
 
       <div class='down'>
          <br> <p class='text'>Webové stránky takového toho tamtoho člověka</p> <br>
