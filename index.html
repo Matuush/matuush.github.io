@@ -3,6 +3,14 @@
 <head> 
    <title> Deez nuts </title>
    <style>
+@font-face {
+   font-family: 'xenippa';
+   src: URL('img/xenippa.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'ninifont';
+   src: URL('img/ninifont.otf') format('opentype');
+}
 .title {
    color: black;
    font-size: 300%;
@@ -14,6 +22,9 @@
 .text {
    color: black;
    font-size: 150%;
+}
+.quote {
+   font-family: 'ninifont';
 }
 .main {grid-area: main;}
 .left {grid-area: left;}
@@ -55,11 +66,9 @@ img {
       </div> </div>
 
       <div class='down'>
-         <br> <p class='text'>Webové stránky takového toho tamtoho člověka</p> <br>
          <h2 class='subtitle'>Projekty</h2>
          <p class='text'>
-            Rekurzivní piškvorky ve Svelte: <a href='p/index.html'>mat.uuush.eu/p</a><br>
-            Rekurzivní piškvorky v C++ do WebAssembly: <a href='pisiskvory/pisiskvory.html'>mat.uuush.eu/pisiskvory</a><br>
+            Rekurzivní piškvorky: <a href='p/index.html'>mat.uuush.eu/p</a><br>
          </p>
 
          <h2 class='subtitle'>Kontakt</h2>
@@ -78,7 +87,7 @@ img {
    ];
    let quotes = document.getElementById('quotes');
    q.forEach(quote => {
-      quotes.innerHTML += '<p class=\'text\'>"<i>' + quote[0] + '</i>"<br> - ' + quote[1] + '</p>';
+      quotes.innerHTML += '<p class=\'text quote\'>"<i>' + quote[0] + '</i>"<br> - ' + quote[1] + '</p>';
    });
 </script>
 </center> </body>
