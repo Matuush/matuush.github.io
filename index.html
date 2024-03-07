@@ -52,7 +52,20 @@ img {
    <div class='container'> 
       <div class='main'>
          <h1>Tohle je přepadení</h1>
-         <div id='quotes'> </div>
+         <div id='quotes'> 
+            <p class='text quote'>
+               "Proč jsme takový vemena Matúši?"<br> - Kačka
+            </p>
+            <p class='text quote'>
+               "Nepřišel Mohamed za javascriptem, přišel javascript za Mohamedem."<br> - Kubík
+            </p>
+            <p class='text quote'>
+               "Chudák Mohamed."<br> - Jirka
+            </p>
+            <p class='text quote'>
+               "Čau lidi, já jsem křeček."<br> - Topení
+            </p>
+         </div>
       </div>
 
       <div class='left'> <div class='imgcontain'>
@@ -70,26 +83,16 @@ img {
       <div class='down'>
          <h2>Projekty</h2>
          <a>Rekurzivní piškvorky: </a>
-         <a href='p/index.html'>mat.uuush.eu/p</a><br>
+         <a href='p/index.html'>mat.uuush.eu/p</a>
+
+         <br>
 
          <h2>Kontakt</h2>
          <p>
             E-mail: matus1@pull.cz<br>
-            Discord: the_matuush<br>
+            Discord: the_matuush
          </p>
       </div>
    </div>
-<script>
-   let q = [
-      ['Proč jsme takový vemena Matúši?', 'Kačka'],
-      ['Nepřišel Mohamed za javascriptem, přišel javascript za Mohamedem.', 'Kubík'],
-      ['Chudák Mohamed.', 'Jirka'],
-      ['Čau lidi, já jsem křeček.', 'Topení']
-   ];
-   let quotes = document.getElementById('quotes');
-   q.forEach(quote => {
-      quotes.innerHTML += '<p class=\'text quote\'>"<i>' + quote[0] + '</i>"<br> - ' + quote[1] + '</p>';
-   });
-</script>
 </center> </body>
 </html>
