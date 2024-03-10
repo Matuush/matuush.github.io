@@ -2,7 +2,7 @@
 <html>
 <head> 
    <title> Deez nuts </title>
-   <style>
+<style>
 @font-face {
    font-family: 'xenippa';
    src: URL('img/xenippa.ttf') format('truetype');
@@ -11,28 +11,18 @@
    font-family: 'ninifont';
    src: URL('img/ninifont.otf') format('opentype');
 }
-h1 {
-   color: black;
-   font-size: 300%;
-}
-h2 {
-   color: black;
-   font-size: 275%;
-}
-a, p {
-   color: black;
-   font-size: 150%;
-}
+h1, h2, a, p {color: black;}
+h1 {font-size: 300%;}
+h2 {font-size: 275%;}
+a, p {font-size: 150%;}
 img {  
    width: 100%;
    height: 100%;
 }
-.quote {
-   font-family: 'ninifont';
-}
 .box {
    border-radius: 1%;
-   margin: 5%;
+   margin-left: 5%;
+   margin-right: 5%;
    padding: 1%;
    background-color: lightgray;
 }
@@ -41,6 +31,7 @@ img {
 .right {grid-area: right;}
 .down {grid-area: down;}
 .imgcontain {object-fit: contain;}
+.quote {font-family: 'ninifont';}
 .container {
    display: grid;
    grid-template-columns: 3fr 2fr 2fr 3fr;
@@ -51,13 +42,13 @@ img {
       "down down down down";
    justify-items: center;
 }
-   </style>
+</style>
 </head>
 
 <body> <center> 
+   <h1>Tohle je přepadení</h1>
    <div class='container'> 
       <div class='main'>
-         <h1>Tohle je přepadení</h1>
          <div class='box'> 
             <p class='text quote'>
                "Proč jsme takový vemena Matúši?"<br> - Kačka
