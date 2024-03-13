@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title> Gatos </title>
+<head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+<body style="background-color:#C9AF98">
+  <ul>
+    <li><a href="main.html">Menu</a></li>
+    <li><a href="Karawita.html">Karawita</a></li>
+    <li><a href="Kashmiri.html">Kashmiri</a></li>
+    <li><a href="Kanabawi.html">Kanabawi</a></li>
+    <li><a href="Shisha.html">Shisha</a></li>
+    <li><a href="Dibiazah.html">Dibiazah</a></li>
+    <li><a href="Sumbul.html">Sumbul</a></li>
+    <liback><a id="jmeno"></a></liback>
+  </ul>  
+
+<h1>Ismail Ahmad Kanabawi</h1>
+
+<img src = "Ismail_Ahmad_Kanabawi.gif">
+
+<h3>
+  Ismail Ahmad Kanabawi byl neohroženým jezdcem na koni a statečným bojovníkem, který vedl své kočičí společníky do mnoha bitev. Jeho dovednosti v boji a nezlomná oddanost k ochraně svého kmene mu vynesly obdiv a úctu v celém regionu. Jeho jméno se stalo synonymem prostatečnost a sílu mezi lidmi i kočkami.
+</h3>
+
+</body>
+</html> 
+<script>
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString);
+
+  var passedusername = urlParams.get('username')
+
+  if(passedusername != null)
+  {
+    username = passedusername
+  }
+
+  else
+  {
+    console.log('hepl')
+    var username = window.prompt("Zadejte svoje uživatelské jméno")
+  }
+
+  if (username != "")
+  {
+  document.getElementById("jmeno").innerText = "Username: " + username;
+  }
+    
+  [...document.querySelectorAll("a")].forEach(v => {
+      v.href += ("?username=" + username);
+    })
+</script>

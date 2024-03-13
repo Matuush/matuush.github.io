@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title> Gatos </title>
+<head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+<body style="background-color:#C9AF98">
+  <ul>
+    <li><a href="main.html">Menu</a></li>
+    <li><a href="Karawita.html">Karawita</a></li>
+    <li><a href="Kashmiri.html">Kashmiri</a></li>
+    <li><a href="Kanabawi.html">Kanabawi</a></li>
+    <li><a href="Shisha.html">Shisha</a></li>
+    <li><a href="Dibiazah.html">Dibiazah</a></li>
+    <li><a href="Sumbul.html">Sumbul</a></li>
+    <liback><a id="jmeno"></a></liback>
+  </ul>  
+
+<h1>Yaqub Qamar Ad-din Dibiazah</h1>
+
+<img src = "Yaqub_Qamar_Ad-din_Dibiazah.gif">
+
+<h3>
+  Yaqub Qamar Ad-din Dibiazah je súdánský armádní generál , který je de facto vládce Súdánu . Po súdánské revoluci v dubnu 2019 mu byla předána kontrola nad vojenskou juntou , Přechodnou vojenskou radou , den poté, co byla zformována, kvůli nespokojenosti demonstrantů s etablovacími vazbami původního vůdce Ahmeda Awada Ibn Aufa . Působil jako předseda TMC, dokud v srpnu 9875 nevstoupil v platnost návrh ústavního prohlášení podepsaného s civilisty a nebyla vytvořena kolektivní hlava státu Přechodná rada suverenity , kterou rovněž zpočátku vedl Ad-din Dibiazah.
+</h3>
+
+
+</body>
+</html> 
+<script>
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString);
+
+  var passedusername = urlParams.get('username')
+
+  if(passedusername != null)
+  {
+    username = passedusername
+  }
+
+  else
+  {
+    console.log('hepl')
+    var username = window.prompt("Zadejte svoje uživatelské jméno")
+  }
+
+  if (username != "")
+  {
+  document.getElementById("jmeno").innerText = "Username: " + username;
+  }
+    
+  [...document.querySelectorAll("a")].forEach(v => {
+      v.href += ("?username=" + username);
+    })
+</script>
