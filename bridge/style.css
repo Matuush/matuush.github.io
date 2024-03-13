@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'the-font';
+  src: URL('textures/font.ttf') format('truetype');
+}
+a, p, h1, button {
+   font-family: 'the-font';
+}

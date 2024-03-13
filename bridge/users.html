@@ -1,0 +1,162 @@
+ <!DOCTYPE html>
+<html>
+<head>
+   <title> Users </title>
+   <link rel="stylesheet" href="style.css">
+
+<style>
+.text {
+   color: black;
+}
+.main {
+  grid-area: main;
+}
+.left {
+   grid-area: left;
+   object-fit: cover;
+}
+.right {
+   grid-area: right;
+   object-fit: cover;
+}
+img {
+   width: 100%;
+   height: 100%;
+}
+.down {
+   grid-area: down;
+   width: 100%;
+   height: 100%;
+}
+.container {
+   display: grid;
+   grid-template-columns: 3fr 2fr 2fr 3fr;
+   grid-template-rows: auto;
+   grid-template-areas: 
+      ". main main ."
+      ". main main ."
+      "left main main right"
+      "left main main right"
+      ". main main ."
+      ". main main ."
+      "down down down down";
+   justify-items: center;
+}
+#builder {width: 500px; height: auto; border: solid;}
+.b {object-fit: cover;}
+.bb {width: 500px;height: 200px;}
+#b0 {object-position: 0px 0%;}
+#b1 {object-position: 0px 50%;}
+#b2 {object-position: 0px 100%;}
+</style>
+</head>
+   <body>
+      <center><h1>The users of Bridge</h1></center>
+      <div class="container">
+         <div class="main"> 
+            <p class="text" id="text">
+In England's heart where rivers gently glide,<br>
+A passion blooms, a bridge to joy beside.<br>
+In quaint abodes and villages so fair,<br>
+The English find a love beyond compare.<br><br>
+
+Oh, Bridge! The game of strategy and wit,<br>
+Where minds entwine, and friendships knit.<br>
+Upon the green, where cards are laid,<br>
+A symphony of minds, a dance well-played.<br><br>
+
+In cozy parlors and grand saloons,<br>
+Tea sipped gently, beneath the silver moons.<br>
+With hands of skill and hearts so keen,<br>
+English souls find solace in the Bridge machine.<br><br>
+
+The click of cards, a shuffle soft,<br>
+A game that lifts the spirits aloft.<br>
+In London's fog or countryside so green,<br>
+The English cherish Bridge, a love serene.<br><br>
+
+Gentle banter, laughter rings,<br>
+As partners share the joy it brings.<br>
+Aces, kings, and diamonds bright,<br>
+Bridge unites them in the soft twilight.<br><br>
+
+So here's to England, its love so true,<br>
+For Bridge, a game that will forever renew.<br>
+In every hand, a story unfolds,<br>
+Of English hearts, where Bridge's magic holds.<br><br>
+            </p>
+         </div>
+         <div class="left">
+         <img src="textures/alzbeta.png" alt="Queen Elizbeth the II."> 
+         <center><a class="text" href="https://en.wikipedia.org/wiki/Elizabeth_II">A Bridge user</a></center>
+         </div>
+
+         <div class="right">
+         <img src="textures/gordon.jpg" alt="Gordon Ramsay" class="right"> 
+         <center><a class="text" href="https://en.wikipedia.org/wiki/Gordon_Ramsay">Other Bridge user</a></center>
+         </div>
+
+         <div class="down"> 
+            <center>
+            <h1>Build your own queen</h1>
+            <div id="builder">
+               <div class="bb"><img class="b" id="b0"></div>
+               <div class="bb" id="nos"><img class="b" id="b1"></div>
+               <div class="bb"><img class="b" id="b2"></div>
+            </div> <br>
+
+            <button id="deleter" onclick="dletThat()"> :D </button><br>
+            </center>
+
+<script>
+   let b = [0, 0, 0];
+   let set = (a) => {
+      document.getElementById("b" + a).setAttribute("src", "textures/queen" + b[a] + ".png");
+   }
+   for(let i = 0; i < 3; i++) {
+      set(i);
+      document.getElementById("b" + i).setAttribute("onclick", "add("+i+")");
+   }
+   let add = (a) => {
+      b[a] += 1;
+      if(b[a] == 3) b[a] = 0;
+      set(a);
+   }
+   let isthere = true;
+   let dletThat = () => {
+      if(isthere) {
+         document.getElementById("nos").remove();
+         document.getElementById("deleter").remove();
+         isthere = false;
+      }
+   }
+</script>
+
+            <h1>An <b>epic</b> story</h1><br>
+            <p class="text">
+In the heart of an English village, where cobblestone streets wound their way past centuries-old cottages, lived a man named Edward, known for his sharp mind and love for the strategic game of bridge. He was the reigning champion of the local bridge club, his victories celebrated with hearty cheers and friendly banter.   <br>
+
+One crisp autumn evening, the village hall buzzed with anticipation as Edward squared off against a formidable opponent, a visiting expert known for cunning plays and unpredictable strategies. The air crackled with excitement as the cards were dealt, and the tension in the room grew palpable.<br>
+
+As the game progressed, Edward found himself facing challenges unlike any before. The visiting opponent, shrewd and unpredictable, seemed to anticipate his every move. The once-confident Englishman was caught off guard, and the lead he had taken for granted slipped through his fingers like autumn leaves in the wind.<br>
+
+The atmosphere in the hall shifted from jubilant to hushed whispers as Edward's once-victorious hand faltered. Each card played felt like a step closer to defeat, and the tension in the room mirrored the intensity of the game.<br>
+
+Yet, despite the mounting pressure, Edward maintained his composure. Every loss, every misplayed hand, fueled a determination to learn and adapt. The Englishman's face, once marked by confidence, now wore the lines of concentration and resilience.<br>
+
+In the end, as the last cards were played, and the scorecards were tallied, the room fell silent. The visiting opponent emerged victorious, leaving Edward to face the bitter taste of defeat. The once-unbeatable champion had been dethroned.<br>
+
+But in that moment of loss, something extraordinary happened. The crowd, instead of reveling in Edward's defeat, rose to their feet in applause. They celebrated not just the victor but also the indomitable spirit of the Englishman who faced adversity with grace.<br>
+
+As Edward shook hands with his opponent, a smile played on his lips. For in the world of bridge, where victories and defeats were mere twists of fate, the true measure of a player lay in their ability to embrace both with humility and the spirit of fair play.<br>
+
+And so, in the small English village, the legend of Edward, the once-undefeated bridge champion, continued not only for his triumphs but for the resilience he displayed in the face of a memorable defeat.<br>
+            </p>
+         </div>
+      </div>
+      <center><a class="text" href="index.html"> Back </a></center>
+   </body>
+
+   <script>
+   </script>
+</html> 

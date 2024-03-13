@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title> Building </title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <center>
+      <h1>The building</h1>
+      <p>Here is a famous bridge - the Tower Bridge</p>
+      <img src="textures/towerbridge.jpg">
+      <p>And here is a step-by-step tutorial to build a bridge</p> <br>
+      <p id="step"></p>
+<script>
+   let text = document.getElementById("step");
+   let steps = [
+      "Determine the purpose of the bridge (e.g., pedestrian, vehicular, railway).<br> Conduct a site survey to assess environmental factors such as terrain, waterways, soil conditions, and potential obstructions.<br> Consider the bridge's length, width, load capacity, and anticipated traffic volume.<br> Determine the budget and timeline for the project.",
+      "Hire a qualified structural engineer or bridge designer to create detailed plans and specifications.<br> Select the appropriate bridge type based on factors such as span length, terrain, and aesthetic preferences. Common bridge types include beam bridges, arch bridges, truss bridges, and suspension bridges.<br> Ensure that the design complies with relevant building codes and regulations.",
+      "Obtain necessary permits and approvals from local authorities, environmental agencies, and other relevant stakeholders.<br> Address any environmental impact concerns and mitigation measures.",
+      "Determine the required materials for construction, including structural steel, concrete, timber, or composite materials.<br> Source materials from reputable suppliers and ensure they meet quality standards and specifications.",
+      "Clear the construction site of vegetation, debris, and any existing structures as needed.<br> Set up temporary access roads, staging areas, and construction facilities.<br> Install temporary supports or falsework to aid in construction.",
+      "Excavate foundation pits or footings according to the design specifications.<br> Pour concrete or install driven piles to create stable foundations.<br> Ensure that the foundations are level and capable of supporting the weight of the bridge.",
+      "Assemble prefabricated bridge components off-site or construct them in-place according to the design plans.<br> Erect structural elements such as beams, girders, trusses, or arches using cranes or other heavy equipment.<br> Install deck panels or roadway surfaces, guardrails, and other finishing elements.",
+      "Conduct structural inspections and load tests to ensure the bridge meets safety and performance requirements.<br> Address any deficiencies or issues identified during testing.<br> Obtain final approvals from relevant authorities before opening the bridge to traffic.",
+      "Complete any remaining landscaping, signage, lighting, and aesthetic enhancements.<br> Develop a maintenance plan to ensure the long-term integrity and safety of the bridge.<br> Monitor the bridge regularly for signs of wear, corrosion, or damage, and perform necessary repairs or maintenance as needed.",
+      "Document the construction process, including as-built drawings, specifications, and inspection records.<br> Conduct a final review to ensure all contractual obligations have been met.<br> Celebrate the successful completion of the bridge project with stakeholders and the community."
+   ];
+   let id = 0;
+   let size = 9;
+   let set = () => {
+      text.innerHTML = "<b>" + (id+1) + "</b><br>" + steps[id];
+   }
+   let next = () => {
+      if(id < size) id++;
+      set();
+   };
+   let prev = () => {
+      if(id > 0) id--;
+      console.log(id);
+      set();
+   };
+   set();
+</script>
+      <button onclick="prev()"> Previous </button>
+      <button onclick="next()"> Next </button> <br><br>
+      <a class="text" href="index.html"> Back </a>
+      </center>
+   </body>
+</html>

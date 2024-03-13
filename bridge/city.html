@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Město Most</title>
+<style>
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f4f4f4;
+   text-align: center;
+}
+header {
+   background-color: rgb(54, 49, 49);
+   color: #fff;
+   padding: 10px;
+}
+section {
+   padding: 20px;
+}
+img {
+   height: 300px;
+   margin-bottom: 20px;
+}
+figure{
+   display: inline-block;
+}
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   text-align: justify;
+   padding: 0 10px;
+   margin-bottom: 20px;
+}
+.column {
+    flex: 0 1 calc(20% - 16px); /* Adjusted width */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 0; /* Removed margin-bottom */
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+        
+#animatedText {
+   font-family: 'Arial', sans-serif;
+   font-size: 55px;
+   fill: rgb(54, 49, 49);
+   stroke: white;
+   stroke-width: 2;
+   stroke-dasharray: 2900;
+   stroke-dashoffset: 2900;
+   animation: drawPath 7s ease-in-out forwards;
+}
+
+@keyframes drawPath {
+   to {stroke-dashoffset: 0;}
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+           <text x="10" y="70" id="animatedText">Vítejte v Mostě!</text>
+        </svg>
+    </header>
+
+    <section>
+        <div class="row">
+            <div class="column">
+                <h2>O městě Most</h2>
+                <p>Město Most je historicky významné a moderní město v Ústeckém kraji, ležící na soutoku řeky Ohře a Bíliny. S bohatou kulturní dědictví, průmyslovou tradicí a malebnou krajinou Krušných hor je Most dynamickým centrem pro život, práci a odpočinek.</p>
+            </div>
+            
+            <div class="column">
+                <h2>Historie</h2>
+                <p>Historie Mostu sahá až do středověku, kdy zde byla založena osada. V průběhu času se město rozvíjelo, především díky uhelným důlním aktivitám a těžbě hnědého uhlí. Během své historie prošel Most mnoha významnými událostmi, které ovlivnily jeho podobu a charakter.</p>
+            </div>
+            
+            <div class="column">
+                <h2>Kultura a památky</h2>
+                <p>Most nabízí bohatou kulturní scénu, která zahrnuje divadla, muzea, galerie a další kulturní instituce. Mezi nejvýznamnější památky patří Katedrála svatého Víta, historický hrad Hněvín a sídliště Lidice.</p>
+            </div>
+            
+            <div class="column">
+                <h2>Doprava</h2>
+                <p>Město Most je důležitým dopravním uzlem s dobrou dostupností díky dálnici D8, železničním spojením a autobusovými linkami. To umožňuje snadný přístup do města jak z vnitrozemí, tak i ze sousedních zemí.</p>
+            </div>
+            
+            <div class="column">
+                <h2>Turistické akce</h2>
+                <p>Okolí Mostu je obklopeno malebnou krajinou Krušných hor a nabízí mnoho turisticky atraktivních míst. Vodní nádrž Fláje a přírodní rezervace jsou ideální pro rekreaci a outdoorové aktivity, zatímco historická centra města lákají milovníky architektury a historie.</p>
+            </div>
+            </div>
+
+        <h3>Fotogalerie</h3>
+        <div>
+            <figure>
+                <img src="textures/city1.jpg" alt="Most obrázek 1" > 
+                <figcaption>Krásné panorama Mostu
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="textures/city2.jpg" alt="Most obrázek 2" > 
+                <figcaption>Kostel Nanebevzetí Panny Marie a okolní park
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="textures/city3.jpg" alt="Most obrázek 3">
+                <figcaption>Historická fotografie Mostu
+                </figcaption>
+            </figure>
+        </div>
+<br>
+<div></div>
+    </section>
+      <center><a class="text" href="index.html"> Zpět </a></center>
+
+    <footer>
+        <p>&copy; 2024 Město Most. Všechna práva vyhrazena.</p>
+    </footer>
+</body>
+</html>
