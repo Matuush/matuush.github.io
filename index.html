@@ -7,13 +7,14 @@
    font-family: 'xenippa';
    src: URL('img/xenippa.ttf') format('truetype');
 }
+.xnp {font-family: xenippa;}
 @font-face {
    font-family: 'ninifont';
    src: URL('img/ninifont.otf') format('opentype');
 }
 h1, h2, a, p {color: black;}
-h1 {font-size: 300%;}
-h2 {font-size: 275%;}
+h1 {font-size: 300%;font-family: xenippa;}
+h2 {font-size: 275%;font-family: xenippa;}
 p {font-size: 150%;}
 img {  
    width: 100%;
@@ -41,14 +42,33 @@ img {
       ". . . .";
    justify-items: center;
 }
+
+#galerie {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto;
+   grid-template-areas: 
+      "aa ab ac"
+      "ba bb bc";
+   justify-items: center;
+}
+#gal0 {grid-area: aa;}
+#gal1 {grid-area: ab;}
+#gal2 {grid-area: ac;}
+#gal3 {grid-area: ba;}
+#gal4 {grid-area: bb;}
+#gal5 {grid-area: bc;}
+.gal {margin: 2.5%;flex-grow: 1;}
+.foot {display: inline-block;}
+#counter {margin-left: 2%; margin-right: 2%;}
 </style>
 </head>
 
 <body> <center> 
-   <h1>Tohle je přepadení</h1>
    <div class='container'> 
       <div class='main'>
          <div class='box'> 
+            <h2>Galerie umění</h2>
             <p class='text quote'>
                "Proč jsme takový vemena Matúši?"<br> - Kačka
             </p>
@@ -83,7 +103,7 @@ img {
          <img src='img/karinka.jpg'>
          <p style='margin-top: 0%;'>
             <i>Obrázek 1:</i>
-            <a style="font-family: xenippa">Karinka</a>
+            <a class="xnp">Karinka</a>
          </p>
       </div> </div>
 
@@ -91,11 +111,51 @@ img {
          <img src='img/puficek.jpg'>
          <p style='margin-top: 0%;'>
             <i>Obrázek 2:</i>
-            <a style="font-family: xenippa">Pufíček</a>
+            <a class="xnp">Pufíček</a>
          </p>
       </div> </div>
    </div>
 
-   <img src="img/gandalf.jpg">
+   <br> <br>
+   <div class="box">
+      <h2>Galerie umění</h2>
+      <div id="galerie">
+         <div id="gal0" class="gal"> </div> 
+         <div id="gal1" class="gal"> </div> 
+         <div id="gal2" class="gal"> </div>
+         <div id="gal3" class="gal"> </div> 
+         <div id="gal4" class="gal"> </div> 
+         <div id="gal5" class="gal"> </div> 
+      </div>
+      <button class="foot xnp" id="lgal">Předchozí</button>
+      <p class="foot xnp" id="counter"> </p>
+      <button class="foot xnp" id="rgal">Další</button>
+   </div>
+   <script>
+      let index = 0;
+      let imgpaths = ["img/gandalf.jpg"];
+      let count = imgpaths.length;
+      let max = Math.floor(count/6);
+      let update = () => {
+         for(let i = 0; i < 6; i++) {
+            let g = document.getElementById("gal" + i);
+            let src = "img/gandalf.jpg";
+            if(i + index*6 < count) src = imgpaths[6*index + i];
+            g.innerHTML = "<img class='galimg' src='" + src + "'>";
+         }
+         document.getElementById("counter").innerHTML = index + ' / ' + max;
+      }
+      document.getElementById("lgal").onclick = () => {
+         if(index <= 0 ) index = max;
+         else index--;
+         update();
+      }
+      document.getElementById("rgal").onclick = () => {
+         if(index >= max) index = 0;
+         else index++;
+         update();
+      }
+      update();
+   </script>
 </center> </body>
 </html>
