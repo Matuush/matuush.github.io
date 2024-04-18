@@ -59,7 +59,10 @@ img {
 #gal4 {grid-area: bb;}
 #gal5 {grid-area: bc;}
 .gal {margin: 2.5%;flex-grow: 1;}
-.foot {display: inline-block;}
+.foot {
+   display: inline-block;
+   font-family: xenippa;
+}
 #counter {margin-left: 2%; margin-right: 2%;}
 </style>
 </head>
@@ -127,9 +130,9 @@ img {
          <div id="gal4" class="gal"> </div> 
          <div id="gal5" class="gal"> </div> 
       </div>
-      <button class="foot" id="lgal"><a clas="xnp">Předchozí</a></button>
-      <p class="foot xnp" id="counter"> </p>
-      <button class="foot" id="rgal"><a clas="xnp">Další</a></button>
+      <button class="foot" id="lgal"><p>Předchozí</p></button>
+      <p class="foot" id="counter"> </p>
+      <button class="foot" id="rgal"><p>Další</p></button>
    </div>
    <script>
       let index = 0;
