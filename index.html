@@ -46,7 +46,6 @@ img {
 #galerie {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: auto;
    grid-template-areas: 
       "aa ab ac"
       "ba bb bc";
@@ -58,10 +57,18 @@ img {
 #gal3 {grid-area: ba;}
 #gal4 {grid-area: bb;}
 #gal5 {grid-area: bc;}
-.gal {margin: 2.5%;flex-grow: 1;}
+.gal {
+   margin: 2.5%;
+   object-fit: contain;
+   aspect-ratio: 1 / 1;
+   padding-bottom: 0%;
+}
 .foot {
    display: inline-block;
    font-family: xenippa;
+}
+.galimg {
+   object-fit: contain;
 }
 #counter {margin-left: 2%; margin-right: 2%;}
 </style>
@@ -123,12 +130,12 @@ img {
    <div class="box">
       <h2>Galerie umění</h2>
       <div id="galerie">
-         <div id="gal0" class="gal"> </div> 
-         <div id="gal1" class="gal"> </div> 
-         <div id="gal2" class="gal"> </div>
-         <div id="gal3" class="gal"> </div> 
-         <div id="gal4" class="gal"> </div> 
-         <div id="gal5" class="gal"> </div> 
+         <div id="gal0" class="gal"><img class="galimg" id="galimg0"></div> 
+         <div id="gal1" class="gal"><img class="galimg" id="galimg1"></div> 
+         <div id="gal2" class="gal"><img class="galimg" id="galimg2"></div>
+         <div id="gal3" class="gal"><img class="galimg" id="galimg3"></div> 
+         <div id="gal4" class="gal"><img class="galimg" id="galimg4"></div> 
+         <div id="gal5" class="gal"><img class="galimg" id="galimg5"></div> 
       </div>
       <button class="foot" id="lgal"><p>Předchozí</p></button>
       <p class="foot" id="counter"> </p>
@@ -136,15 +143,14 @@ img {
    </div>
    <script>
       let index = 0;
-      let imgpaths = ["img/gandalf.jpg"];
+      let imgpaths = ["assist.jpg", "cabelist.jpg", "computerist.jpg", "culturist.jpg", "drivist.jpg", "forkliftist.jpg", "hamerist.webp", "listenist.jpg", "readist.jpg", "readist2.jpg", "pottist.jpg", "ew.jpg", "waterist.jpg", "the_fight.jpg", "tankist.png", "lingebra.jpg", "i_was_put.jpg", "real.jpg", "freebird.jpg", "Bez_nadeje.png", "amogusepic.jpg"];
       let count = imgpaths.length;
       let max = Math.floor(count/6);
       let update = () => {
          for(let i = 0; i < 6; i++) {
-            let g = document.getElementById("gal" + i);
-            let src = "img/gandalf.jpg";
+            let src = "gandalf.jpg";
             if(i + index*6 < count) src = imgpaths[6*index + i];
-            g.innerHTML = "<img class='galimg' src='" + src + "'>";
+            document.getElementById("galimg"+i).src = "img/"+src;
          }
          document.getElementById("counter").innerHTML = index + ' / ' + max;
       }
